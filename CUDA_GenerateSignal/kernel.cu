@@ -2,7 +2,7 @@
 #include <fstream>
 #include <cmath>
 #include <vector>
-#include <iomanip> s
+#include <iomanip> 
 
 // 包含CUDA頭文件
 #include <cuda_runtime.h>
