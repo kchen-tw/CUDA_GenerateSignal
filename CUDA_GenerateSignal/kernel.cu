@@ -45,7 +45,7 @@ int main() {
 
 
     // 宣告Host端的記憶體
-    std::vector<Complex> h_waveform(N);
+    vector<Complex> h_waveform(N);
     // C4=261.63 (Do), D4=293.67 (Re), E4=329.64(Mi), F4=349.24(Fa), G4=392(So), A4=440(La), B4=493.88(Si)
     vector<double> h_frequencies = { 440.0, 880.0 };  // 頻率
     vector<double> h_amplitudes = { 1.0, 0.5 };  // 振幅
@@ -79,12 +79,12 @@ int main() {
 
     // 將正弦波寫入檔案
     ofstream waveformFile("sine_waveform.txt");
-    waveformFile << std::fixed << std::setprecision(8); // 設定小數點後8位
+    waveformFile << fixed << setprecision(8); // 設定小數點後8位
     for (const auto& value : h_waveform) {
         waveformFile << cuCreal(value) << " " << cuCimag(value) << endl;
     }
     waveformFile.close();
-    std::cout << "Sine wave file 'sine_waveform.txt' created successfully." << std::endl;
+    cout << "Sine wave file 'sine_waveform.txt' created successfully." << endl;
 
 
     // 釋放Device端的記憶體
