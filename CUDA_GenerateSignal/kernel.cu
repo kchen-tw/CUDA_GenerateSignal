@@ -47,7 +47,7 @@ int main() {
     // 宣告Host端的記憶體
     vector<Complex> h_waveform(N);
     // C4=261.63 (Do), D4=293.67 (Re), E4=329.64(Mi), F4=349.24(Fa), G4=392(So), A4=440(La), B4=493.88(Si)
-    vector<double> h_frequencies = { 440.0, 880.0 };  // 頻率
+    vector<double> h_frequencies = { 440.0, 261.63 };  // 頻率
     vector<double> h_amplitudes = { 1.0, 0.5 };  // 振幅
 
     // Device端的記憶體
